@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Your corner of the store. | Little Pantry</title>
+    <link rel="stylesheet" href="store-styles.css">
+    <script src="store.js" defer></script>
+  </head>
+  <body data-page="account">
+    <header>
+      <nav aria-label="Main navigation"><a class="brand" href="main-grocery-page.html">Little Pantry<span aria-hidden="true"> ✳</span></a><a href="main-grocery-page.html">Shop</a><a href="shopping-cart.html">Basket <span id="cart-count">0</span></a><a href="delivery-and-map.html">Delivery</a><a href="my-account-details.html" id="account-link" aria-current="page">Account</a><button id="logout" class="secondary hidden">Sign out</button>
+      </nav>
+    </header>
+    <main>
+      <div id="notice" class="notice" role="status" aria-live="polite"></div>
+      <div class="eyebrow">My account</div>
+      <h1>Your corner of the store.</h1>
+      <div id="protected">
+        <div class="columns">
+          <section class="panel">
+            <h2>Profile</h2>
+            <p id="username"></p>
+            <p id="email" class="muted"></p>
+          </section>
+          <section class="panel">
+            <h2>Saved delivery address</h2>
+            <p id="saved-address"></p><a href="delivery-and-map.html">Edit delivery details →</a>
+        </section></div>
+        <section class="panel">
+          <h2>Purchase history</h2>
+          <!-- Receipts preserve prices from checkout. -->
+          <div id="orders"></div>
+      </section></div>
+    </main>
+    <footer>Little Pantry · Undergraduate grocery store project · Prices in Singapore dollars · Simulated delivery
+    </footer>
+  </body>
+</html>

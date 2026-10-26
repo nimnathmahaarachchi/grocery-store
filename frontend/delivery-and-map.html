@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Checkout | Little Pantry</title><link rel="stylesheet" href="store-styles.css"><script src="store.js" defer></script></head>
+<body data-page="delivery">
+    <header>
+      <nav aria-label="Main navigation"><a class="brand" href="main-grocery-page.html">Little Pantry<span aria-hidden="true"> ✳</span></a><a href="main-grocery-page.html">Shop</a><a href="shopping-cart.html">Basket <span id="cart-count">0</span></a><a href="delivery-and-map.html" aria-current="page">Delivery</a><a href="my-account-details.html" id="account-link">Account</a><button id="logout" class="secondary hidden">Sign out</button>
+      </nav>
+    </header>
+
+<main class="delivery-checkout">
+  <div class="checkout-heading"><a class="back-link" href="shopping-cart.html" aria-label="Back to basket">←</a><div><span class="eyebrow">One last step</span><h1>Checkout</h1><p class="muted">Little Pantry · Your everyday essentials</p></div></div>
+  <div id="notice" class="notice" role="status" aria-live="polite"></div>
+  <form id="protected" class="checkout-layout">
+    <div class="checkout-sections">
+      <section class="checkout-section"><h2>Delivering to</h2>
+        <label for="address">Delivery address</label><textarea id="address" maxlength="300" rows="2" required placeholder="Street, building, unit and postal code"></textarea><button id="save-address" type="button" class="secondary">Save address</button>
+        <label for="instructions">Delivery instructions <span class="muted">(optional)</span></label><input id="instructions" maxlength="300" placeholder="For example, use the side entrance">
+        <label class="toggle-row" for="leave-at-door"><span>Leave at the door</span><input id="leave-at-door" type="checkbox" role="switch"></label>
+      </section>
+      <section class="checkout-section"><h2>Delivery options</h2>
+        <fieldset class="delivery-options"><legend class="visually-hidden">Choose delivery speed</legend>
+          <label class="delivery-choice"><input type="radio" name="mode" value="priority"><span><strong>Priority ⚡</strong><small>15–25 minutes</small></span><span class="option-price">+ $1.10</span></label>
+          <label class="delivery-choice"><input type="radio" name="mode" value="standard" checked><span><strong>Standard</strong><small>20–40 minutes</small></span><span class="option-price">$2.50</span></label>
+          <label class="delivery-choice"><input type="radio" name="mode" value="scheduled"><span><strong>Scheduled</strong><small>Choose a date and time</small></span></label>
+        </fieldset>
+        <div id="schedule-fields" class="hidden"><label for="scheduled">Delivery date and time</label><input id="scheduled" type="datetime-local"><p class="muted">Your local time. Choose 30 minutes to seven days ahead.</p></div>
+        <p class="muted">Priority adds S$1.10 to the standard fee. Times are demonstration estimates.</p>
+      </section>
+      <section class="checkout-section"><h2>Tip your rider</h2><p class="muted">Optional. order total.</p>
+        <fieldset class="tip-options"><legend class="visually-hidden">Choose a tip</legend><label><input type="radio" name="tip" value="0" checked><span>Not now</span></label><label><input type="radio" name="tip" value="150"><span>$1.50</span></label><label><input type="radio" name="tip" value="200"><span>$2.00</span></label><label><input type="radio" name="tip" value="300"><span>$3.00</span></label></fieldset>
+      </section>
+      <section class="checkout-section"><h2>Payment method</h2><div class="payment"><span aria-hidden="true">▣</span><div><strong>checkout</strong><p class="muted">Payment needs collection.</p></div></div></section>
+    </div>
+    <!-- Totals are checked again by the server at checkout. -->
+    <aside class="checkout-summary"><h2>Order summary</h2><a href="shopping-cart.html">Edit basket</a><div id="delivery-items"></div>
+      <div class="summary-costs"><div class="total-line"><span>Subtotal</span><span id="delivery-subtotal"></span></div><div class="total-line"><span id="delivery-fee-label">Standard delivery</span><span id="delivery-fee"></span></div><div class="total-line"><span>Rider tip</span><span id="delivery-tip"></span></div></div>
+      <div class="checkout-action"><div class="total-line grand"><strong>Total</strong><strong id="delivery-total" aria-live="polite"></strong></div><button id="place-order" type="submit">Place order</button><p class="muted">Review your address before placing the order.</p></div>
+    </aside>
+  </form>
+</main>
+<footer>Little Pantry · Prices in dollars · Demonstration checkout</footer>
+</body>
+</html>

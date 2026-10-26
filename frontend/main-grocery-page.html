@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Your everyday essentials. | Little Pantry</title>
+    <link rel="stylesheet" href="store-styles.css">
+    <script src="store.js" defer></script>
+  </head>
+  <body data-page="catalogue">
+    <header>
+      <nav aria-label="Main navigation"><a class="brand" href="main-grocery-page.html">Little Pantry<span aria-hidden="true"> ✳</span></a><a href="main-grocery-page.html" aria-current="page">Shop</a><a href="shopping-cart.html">Basket <span id="cart-count">0</span></a><a href="delivery-and-map.html">Delivery</a><a href="my-account-details.html" id="account-link">Account</a><button id="logout" class="secondary hidden">Sign out</button>
+      </nav>
+    </header>
+    <main>
+      <div id="notice" class="notice" role="status" aria-live="polite"></div>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">The neighbourhood pantry</div>
+          <h1>Good food.<br>Close to home.</h1>
+          <p>Everyday groceries, with stock and expiry dates you can check before you choose.</p><a class="button" href="#catalogue">Explore the shelves </a></div>
+        <div class="hero-stamp">Fresh finds<br>Fair prices</div>
+      </section>
+      <section id="catalogue">
+        <div class="toolbar">
+          <div>
+            <h2>On our shelves</h2><span id="result-count" class="muted"></span></div>
+          <div>
+            <label for="search">Search groceries</label>
+            <input id="search" type="search" placeholder="Try apples, milk or bread…" maxlength="100"></div></div>
+        <!-- Products come from the catalogue API. -->
+        <div id="products" class="grid"></div>
+      </section>
+    </main>
+    <footer>Little Pantry · Undergraduate grocery store project · Prices in Singapore dollars · Simulated delivery
+    </footer>
+  </body>
+</html>

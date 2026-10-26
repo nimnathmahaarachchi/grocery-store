@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 190">
+<ellipse cx="100" cy="165" rx="65" ry="7" fill="#dadcc9"/>
+<path d="M65 45h55l18 25v90H65z" fill="#fafaf2" stroke="#60899a" stroke-width="3"/>
+<path d="M65 45l18-20h37v20" fill="#9bbccb"/>
+<path d="M65 85h73v45H65z" fill="#98bbca"/>
+<text x="101" y="113" text-anchor="middle" fill="#294d61" font-size="17">MILK</text>
+</svg>

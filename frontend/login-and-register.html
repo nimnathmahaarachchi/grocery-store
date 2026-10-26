@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Welcome to the pantry. | Little Pantry</title>
+    <link rel="stylesheet" href="store-styles.css">
+    <script src="store.js" defer></script>
+  </head>
+  <body data-page="login">
+    <header>
+      <nav aria-label="Main navigation"><a class="brand" href="main-grocery-page.html">Little Pantry<span aria-hidden="true"> ✳</span></a><a href="main-grocery-page.html">Shop</a><a href="shopping-cart.html">Basket <span id="cart-count">0</span></a><a href="delivery-and-map.html">Delivery</a><a href="my-account-details.html" id="account-link">Account</a><button id="logout" class="secondary hidden">Sign out</button>
+      </nav>
+    </header>
+    <main>
+      <div id="notice" class="notice" role="status" aria-live="polite"></div>
+      <div class="eyebrow">Your grocery account</div>
+      <h1>Welcome to the pantry.</h1>
+      <p class="muted">Sign in to save your basket and arrange a delivery.</p>
+      <div class="columns">
+        <section class="panel">
+          <h2>Sign in</h2>
+          <!-- JavaScript submits both forms to the authentication API. -->
+          <form id="login-form">
+            <label for="login-id">Username or email</label>
+            <input id="login-id" name="login" autocomplete="username" maxlength="160" required>
+            <label for="login-password">Password</label>
+            <input id="login-password" name="password" type="password" autocomplete="current-password" maxlength="128" required><button>Sign in</button>
+          </form>
+        </section>
+        <section class="panel">
+          <h2>Create an account</h2>
+          <form id="register-form">
+            <label for="new-name">Username</label>
+            <input id="new-name" name="username" autocomplete="username" pattern="[A-Za-z0-9_]{3,40}" minlength="3" maxlength="40" required>
+            <p class="muted">3–40 letters, digits or underscores.</p>
+            <label for="new-email">Email</label>
+            <input id="new-email" name="email" type="email" autocomplete="email" maxlength="160" required>
+            <label for="new-password">Password</label>
+            <input id="new-password" name="password" type="password" autocomplete="new-password" minlength="10" maxlength="128" required>
+            <p class="muted">Use 10–128 characters. Login alerts are sent when the sandbox Gmail service is configured.</p><button>Create account</button>
+          </form>
+      </section></div>
+    </main>
+    <footer>Little Pantry · Undergraduate grocery store project · Prices in Singapore dollars · Simulated delivery
+    </footer>
+  </body>
+</html>

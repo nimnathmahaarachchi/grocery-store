@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 190">
+<ellipse cx="100" cy="165" rx="65" ry="7" fill="#dadcc9"/>
+<path d="M59 31h82l7 130H53z" fill="#b27046"/>
+<path d="M69 56h62v75H69z" fill="#ebd58a"/>
+<g stroke="#c5a453" stroke-width="2">
+<path d="M77 58v71m8-71v71m8-71v71m8-71v71m8-71v71m8-71v71m8-71v71"/>
+</g>
+<text x="100" y="147" text-anchor="middle" fill="white" font-size="12">SPAGHETTI</text>
+</svg>

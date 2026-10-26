@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Your basket. | Little Pantry</title>
+    <link rel="stylesheet" href="store-styles.css">
+    <script src="store.js" defer></script>
+  </head>
+  <body data-page="cart">
+    <header>
+      <nav aria-label="Main navigation"><a class="brand" href="main-grocery-page.html">Little Pantry<span aria-hidden="true"> ✳</span></a><a href="main-grocery-page.html">Shop</a><a href="shopping-cart.html" aria-current="page">Basket <span id="cart-count">0</span></a><a href="delivery-and-map.html">Delivery</a><a href="my-account-details.html" id="account-link">Account</a><button id="logout" class="secondary hidden">Sign out</button>
+      </nav>
+    </header>
+    <main>
+      <div id="notice" class="notice" role="status" aria-live="polite"></div>
+      <div class="eyebrow">A few good essentials</div>
+      <h1>Your basket.</h1>
+      <div id="protected">
+        <section class="panel">
+          <!-- Cart rows and totals come from the active session. -->
+          <div id="cart-items"></div>
+          <div class="totals">
+            <div class="total-line"><span>Subtotal</span><span id="subtotal"></span></div>
+            <div class="total-line"><span>Delivery fee</span><span id="fee"></span></div>
+            <div class="total-line grand"><span>Total</span><strong id="total"></strong></div>
+            <p class="muted">Choose your <a href="delivery-and-map.html">delivery details</a> at checkout. No payment is collected.</p><button id="checkout">Continue to delivery</button></div>
+      </section></div>
+    </main>
+    <footer>Little Pantry · Undergraduate grocery store project · Prices in Singapore dollars · Simulated delivery
+    </footer>
+  </body>
+</html>
