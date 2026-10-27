@@ -1,4 +1,4 @@
-"""The login notifier. Java calls this script after a successful sign-in."""
+
 import os
 import smtplib
 import sys
